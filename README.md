@@ -32,7 +32,8 @@ CSS Module 存在的问题
 
 CSS Module 解决方案
 1.启用cssModules
-
+css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]
+加上modules即为启用，localIdentName为命名规则
 
 
 

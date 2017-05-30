@@ -1,8 +1,11 @@
 "use strict";
 
-import React, { Component } from 'react';
-import { branch } from "baobab-react/higher-order";
+import React, {Component} from 'react';
+import { branch} from "baobab-react/higher-order";
 import classNames from "classnames";
+import { immutableRenderDecorator } from 'react-immutable-render-mixin';
+import CSSModules from 'react-css-modules';
+import styles from "../index.less";
 
 import _ from "lodash";
 import actions from "../utils/actions";
@@ -15,23 +18,29 @@ const style = {
     width: 300
 }
 
-class Page extends Component{
-    constructor(props){
+// @immutableRenderDecorator
+// @CSSModules(styles, { allowMultiple: true})
+
+class Page extends Component {
+    constructor(props) {
         super(props);
         _.bindAll(this, "handleClickPress");
-        commons.initComponent(this, { actions: actions });
- 
+        commons.initComponent(this, {
+            actions: actions
+        });
+
     }
 
-    handleClickPress(){
+    handleClickPress() {
         this.dispatch("showPress", !this.props.data.btnPress)
     }
-   
-    render(){
+
+    render() {
+        console.log(styles)
         let div1Class = classNames({
-            'div1':true,
+            'div1': true,
             'btn-pressed': this.props.data.btnPress,
-            'btn-over' : !this.props.data.btnPress
+            'btn-over': !this.props.data.btnPress
         })
         return (
             <div>

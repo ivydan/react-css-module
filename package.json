@@ -35,6 +35,10 @@
   "devDependencies": {
     "classnames": "^2.2.5",
     "less": "^2.7.2",
-    "raf": "^3.3.2"
+    "raf": "^3.3.2",
+    "react-css-modules": "^3.7.10",
+    "react-motion": "^0.4.5",
+    "react-immutable-render-mixin": "^0.9.7",
+    "immutable": "^3.8.1"
   }
 }

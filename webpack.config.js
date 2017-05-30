@@ -16,8 +16,8 @@ module.exports = {
     module: {
         loaders:[
 			{ test: /\.css$/,    loader: "style-loader!css-loader" },
-			// { test: /\.less$/,   loader: "style-loader!css-loader!less-loader" },
-			{ test: /\.less$/,   loader: lessLoader },
+			{ test: /\.less$/,   loader: "style-loader!css-loader!less-loader" },
+			// { test: /\.less$/,   loader: lessLoader },
 			{ test: /\.png$/,    loader: "url-loader?prefix=img/&limit=5000" },
 			{ test: /\.jpg$/,    loader: "url-loader?prefix=img/&limit=5000" },
 			{ test: /\.gif$/,    loader: "url-loader?prefix=img/&limit=5000" },
